@@ -13,8 +13,8 @@ function Navbar() {
             <div className='flex justify-center '>
                 <div className='w-[350px] md:w-[1200px] mb-5'>
                     <nav className='w-auto py-5 flex justify-between items-center'>
-                        <div className='flex'>
-                            {/* <img src="/logo.svg" className='' alt="" /> */}
+                        <div className='flex justify-center items-center gap-1'>
+                            <img src="/logo.svg" className='' alt="" />
                             <h1 className='font-bold text-3xl tracking-wide text-violet-950'>CarePoint</h1>
                         </div>
 
