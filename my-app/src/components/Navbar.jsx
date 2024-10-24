@@ -11,7 +11,7 @@ function Navbar() {
     return (
         <>
             <div className='flex justify-center '>
-                <div className='w-[1200px] mb-5'>
+                <div className='w-[350px] md:w-[1200px] mb-5'>
                     <nav className='w-auto py-5 flex justify-between items-center'>
                         <div className='flex'>
                             {/* <img src="/logo.svg" className='' alt="" /> */}

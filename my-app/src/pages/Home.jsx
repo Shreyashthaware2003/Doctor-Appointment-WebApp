@@ -102,32 +102,42 @@ function Home() {
         <>
             <Navbar />
             <div className='flex justify-center '>
-                <div className='w-[1200px]'>
+                <div className='w-[350px] md:w-[1200px] mx-4'>
                     <div className='flex flex-col'>
                         {/* #1 */}
-                        <div className='w-full bg-[#5f6fff] rounded-lg grid grid-cols-2 px-10 relative'>
-
-                            <div className='flex flex-col justify-center pt-[10vw] pb-[6vw] px-7'>
-                                <h1 className=' text-5xl font-bold text-white my-4'>Book Appointment With Trusted Doctors</h1>
-                                <div className='flex gap-4 text-sm text-white justify-center my-2'>
-                                    <img src="/group_profiles.png" alt="group_profiles" className='w-28' />
-                                    <p>Simply browse through our extensive list of trusted doctors,
-                                        schedule your appointment hassle-free.</p>
+                        <div className='w-full bg-[#5f6fff] rounded-lg grid grid-cols-1 md:grid-cols-2 px-5 md:px-10 relative'>
+                            <div className='flex flex-col justify-center pt-10 md:pt-[10vw] pb-10 md:pb-[6vw]  md:px-7'>
+                                <h1 className='text-3xl md:text-5xl font-bold text-white my-4 md:text-left'>
+                                    Book Appointment <br />With Trusted Doctors
+                                </h1>
+                                <div className='flex flex-col md:flex-row gap-4 text-sm text-white justify-center md:justify-start my-2'>
+                                    <img src="/group_profiles.png" alt="group_profiles" className='w-28 md:w-28 mx-auto md:mx-0' />
+                                    <p className='md:text-left'>
+                                        Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.
+                                    </p>
                                 </div>
-                                <a href="" className='text-sm flex gap-1 items-center justify-center bg-white text-gray-600 rounded-full w-48 py-3 px-4 my-4 hover:scale-105 duration-300'>Book appointment <IoIosArrowRoundForward className='text-xl font-extrabold' /></a>
+                                <div className='w-full flex justify-center'>
+                                    <a href="#speciality" className=' text-xs md:text-sm flex gap-1 items-center justify-center bg-white text-gray-600 rounded-full w-56 md:w-48 py-3 px-1 md:px-4 my-4 hover:scale-105 duration-300'>
+                                        Book Appointment <IoIosArrowRoundForward className='text-xl font-extrabold' />
+                                    </a>
+                                </div>
                             </div>
-                            <div>
-                                <img src="/header_img.png" alt="" className='absolute bottom-0 w-[580px] px-10' />
+                            <div className='relative flex justify-center'>
+                                <img src="/header_img.png" alt="header" className='w-64 md:w-[580px] md:absolute bottom-0 px-0 md:px-10' />
                             </div>
                         </div>
 
                         {/* #2 */}
-                        <div className='flex flex-col justify-center items-center py-16'>
-                            <h1 className='text-3xl font-semibold '>Find by Speciality</h1>
-                            <p className='w-1/3 text-center text-sm my-6'>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
-                            <div className='flex gap-4'>
+                        <div id='speciality' className='flex flex-col justify-center items-center py-16'>
+                            <h1 className='text-3xl font-semibold'>Find by Speciality</h1>
+                            <p className='md:w-1/3 text-center text-sm my-6'>
+                                Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.
+                            </p>
+
+                            {/* Container for the scrollable list */}
+                            <div className='flex md:justify-center gap-4  overflow-scroll md:overflow-visible scrollbar-hide w-full px-4 md:px-0'>
                                 {speciality.map((items, index) => (
-                                    <a key={index} className='flex flex-col items-center justify-center cursor-pointer hover:translate-y-[-10px] transition-all duration-500'>
+                                    <a key={index} className='flex flex-col items-center justify-center cursor-pointer min-w-[100px] md:min-w-0 hover:translate-y-[-10px] transition-all duration-500'>
                                         <img src={items.img} alt={items.imgAlt} className='w-24' />
                                         <p className='text-xs'>{items.title}</p>
                                     </a>
@@ -138,12 +148,12 @@ function Home() {
                         {/* #3 */}
                         <div className='flex flex-col justify-center items-center py-16'>
                             <h1 className='text-3xl font-semibold '>Top Doctors to Book</h1>
-                            <p className='w-1/3 text-center text-sm my-6'>Simply browse through our extensive list of trusted doctors.</p>
+                            <p className='md:w-1/3 text-center text-sm my-6'>Simply browse through our extensive list of trusted doctors.</p>
                             {/* card div */}
-                            <div className='grid grid-cols-5 gap-6'>
+                            <div className='grid md:grid-cols-5 gap-6'>
                                 {/* Cards */}
                                 {doc.map((items, index) => (
-                                    <div key={index} className='rounded-lg border border-[#C9D8FF] hover:translate-y-[-10px] transition-all duration-500 cursor-pointer'>
+                                    <div key={index} className='rounded-lg border border-[#C9D8FF] hover:translate-y-[-10px] transition-all duration-500 cursor-pointer mx-3 md:mx-1'>
                                         <div className='bg-[#EAEFFF] rounded-t-lg'>
                                             <img src={items.img} alt={items.imgAlt} />
                                         </div>
@@ -165,13 +175,13 @@ function Home() {
                         </div>
 
                         {/* #4 */}
-                        <div className='w-full bg-[#5f6fff] rounded-lg grid grid-cols-2 px-10 relative mb-16'>
-                            <div className='flex flex-col justify-center py-[4vw] pl-7 md:w-[50vw]'>
-                                <h1 className=' text-5xl font-bold text-white my-4'>Book Appointment <br /> With 100+ Trusted Doctors</h1>
-                                <a href="" className='text-sm flex gap-1 items-center justify-center bg-white text-gray-600 rounded-full w-48 py-3 px-4 my-4 hover:scale-105 duration-300'>Create account</a>
+                        <div className='w-full bg-[#5f6fff] rounded-lg grid md:grid-cols-2 px-4 md:px-10 relative mb-16'>
+                            <div className='flex flex-col justify-center py-[4vw] md:pl-7 md:w-[50vw]'>
+                                <h1 className='text-2xl md:text-5xl font-bold text-white my-4'>Book Appointment <br /> With 100+ Trusted Doctors</h1>
+                                <a href="" className='text-sm flex gap-1 items-center justify-center bg-white text-gray-600 rounded-full w-32 md:w-48 py-3 px-4 my-4 hover:scale-105 duration-300'>Create account</a>
                             </div>
                             <div>
-                                <img src="/appointment_img.png" alt="" className='absolute bottom-0 w-[420px] px-10 right-0' />
+                                <img src="/appointment_img.png" alt="" className='hidden md:flex absolute bottom-0 w-[420px] px-10 right-0' />
                             </div>
                         </div>
                     </div>
