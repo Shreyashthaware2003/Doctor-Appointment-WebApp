@@ -44,57 +44,57 @@ function Home() {
         },
         {
             img: '/doctors/doc2.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Emily Larson',
+            title2: 'Gynecologist',
+            imgAlt: 'Dr. Emily Larson',
         },
         {
             img: '/doctors/doc3.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Sarah Patel',
+            title2: 'Dermatologist',
+            imgAlt: 'Dr. Sarah Patel',
         },
         {
             img: '/doctors/doc4.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Christopher Lee',
+            title2: 'Pediatricians',
+            imgAlt: 'Dr. Christopher Lee',
         },
         {
             img: '/doctors/doc5.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Jennifer Garcia',
+            title2: 'Neurologist',
+            imgAlt: 'Dr. Jennifer Garcia',
         },
         {
             img: '/doctors/doc6.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Andrew Williams',
+            title2: 'Gastroenterologist',
+            imgAlt: 'Dr. Andrew Williams',
         },
         {
             img: '/doctors/doc7.png',
-            title1: 'Dr. Richard James',
+            title1: 'Dr. Christopher Davis',
             title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            imgAlt: 'Dr. Christopher Davis',
         },
         {
             img: '/doctors/doc8.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Timothy White',
+            title2: 'Gynecologist',
+            imgAlt: 'Dr. Timothy White',
         },
         {
             img: '/doctors/doc9.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Ava Mitchell',
+            title2: 'Dermatologist',
+            imgAlt: 'Dr. Ava Mitchell',
         },
         {
             img: '/doctors/doc10.png',
-            title1: 'Dr. Richard James',
-            title2: 'General physician',
-            imgAlt: 'Dr. Richard James',
+            title1: 'Dr. Jeffrey King',
+            title2: 'Pediatricians',
+            imgAlt: 'Dr. Jeffrey King',
         },
     ]
 
@@ -158,6 +158,20 @@ function Home() {
                                     </div>
                                 ))}
 
+                            </div>
+                        </div>
+                        <div className='flex justify-center items-center mb-16'>
+                            <a href="" className='py-3 px-12 bg-[#eaefff] rounded-full'>more</a>
+                        </div>
+
+                        {/* #4 */}
+                        <div className='w-full bg-[#5f6fff] rounded-lg grid grid-cols-2 px-10 relative mb-16'>
+                            <div className='flex flex-col justify-center py-[4vw] pl-7 md:w-[50vw]'>
+                                <h1 className=' text-5xl font-bold text-white my-4'>Book Appointment <br /> With 100+ Trusted Doctors</h1>
+                                <a href="" className='text-sm flex gap-1 items-center justify-center bg-white text-gray-600 rounded-full w-48 py-3 px-4 my-4 hover:scale-105 duration-300'>Create account</a>
+                            </div>
+                            <div>
+                                <img src="/appointment_img.png" alt="" className='absolute bottom-0 w-[420px] px-10 right-0' />
                             </div>
                         </div>
                     </div>
